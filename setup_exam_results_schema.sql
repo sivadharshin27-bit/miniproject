@@ -1,0 +1,17 @@
+ALTER TABLE public.exam_results 
+ADD COLUMN IF NOT EXISTS student_name text,
+ADD COLUMN IF NOT EXISTS student_department text,
+ADD COLUMN IF NOT EXISTS student_leetcode_username text,
+ADD COLUMN IF NOT EXISTS question jsonb,
+ADD COLUMN IF NOT EXISTS programming_marks numeric,
+ADD COLUMN IF NOT EXISTS mcq_marks numeric,
+ADD COLUMN IF NOT EXISTS observation_marks numeric,
+ADD COLUMN IF NOT EXISTS total_marks numeric,
+ADD COLUMN IF NOT EXISTS max_marks numeric,
+ADD COLUMN IF NOT EXISTS code_output text,
+ADD COLUMN IF NOT EXISTS output_matches boolean,
+ADD COLUMN IF NOT EXISTS mcq_answers jsonb,
+ADD COLUMN IF NOT EXISTS time_spent integer,
+ADD COLUMN IF NOT EXISTS malpractice boolean,
+ADD COLUMN IF NOT EXISTS malpractice_reason text,
+ADD COLUMN IF NOT EXISTS submitted_at timestamptz;
